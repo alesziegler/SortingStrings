@@ -22,4 +22,20 @@ for word in retezce:
     first_character = word[0]
     kategorie[first_character].append(word)
 
+sorted_kategorie = sorted(kategorie)
+
 print(kategorie)
+
+print(sorted_kategorie)
+
+def list_items(list):
+  for item in list:
+    print(item,end=",")
+    
+
+for character in sorted(kategorie):
+  printable_words = ""
+  for word in kategorie.get(character):
+    printable_words += word
+  print(f"{character} : {kategorie.get(character)}")
+  print(printable_words)
